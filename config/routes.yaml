@@ -1,0 +1,7 @@
+index:
+    path: /
+    controller: App\Controller\HomeController::indexAction
+
+ArtworkRoute:
+    path: /artwork/{artwork_slug}
+    controller: App\Controller\ArtworkController::ViewArtwork
