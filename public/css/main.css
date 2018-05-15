@@ -27,7 +27,6 @@ min-width: 14rem;
     flex-flow: row wrap;
     width: 100%;
     max-width: 1200px;
-    //padding-top: 3vh;
     margin: 2rem 2rem 2rem 16rem;
     //border: 1px solid green;
 }
@@ -60,20 +59,21 @@ a.active {
 }
 .image-grid, .news-grid {
     display: flex;
-    justify-content: center;
+    //justify-content: center;
     flex-flow: row wrap;
-    max-width: 1000px;
-    padding-left: 14rem;
+    //max-width: 1000px;
+    //padding-left: 14rem;
 }
 
 .image-wrapper {
     flex: 40%;
-    padding: 1rem;
+    padding: 0 0 0 1rem;
     text-align: right;
 }
 
 .image-wrapper:nth-child(odd) {
     text-align: left;
+    padding: 0 1rem 0 0 ;
 }
 
 .large-image {
@@ -176,22 +176,21 @@ p {
 }
 
 img {
-    //max-width: 100%;
-    //max-height: 100%;
+    max-width: 100%;
+    max-height: 100%;
 }
 
 @media screen and (orientation: portrait) {
     .sidebar {
-         height: 7rem;
+         height: 8rem;
          width: 100%;
     }
     .content {
-        padding-top: 2vh;
-        margin-left: 2rem;
+        margin: 8rem 2rem 8rem 2rem;
     }
     .logo {
         width: 3rem;
-        margin: 0.8rem 4vw;
+        margin: 0.7rem 4vw;
     }
     nav ul {
         position: absolute;
@@ -208,7 +207,7 @@ img {
     }
     .image-grid, .news-grid {
         padding-left: 0;
-        margin: 0 4vw;
+        margin: 0 0;
     }
 
     .image-single-wrapper {
@@ -232,14 +231,16 @@ img {
 
 @media screen and (max-width: 600px) {
     .content {
-        padding-top: 0;
+        margin: 6rem 2rem 4rem 2rem;
     }
     .image-wrapper {
     flex: 100%;
     margin-bottom: 2vh;
+    padding: 0 0 0 0;
     }
     .image-wrapper:nth-child(odd) {
         text-align: right;
+        padding: 0 0 0 0;
     }
     .image-single-wrapper {
         //height: 100vh;
@@ -256,11 +257,16 @@ img {
         flex-flow: column wrap;
     flex: 100%;
     }
-    .image-single-text {
-        display: none;
+    .image-grid {
+        max-width: 40vh;
     }
 }
 
+@media screen and (max-height: 860px) and (max-width: 600px) {
+.image-single-text {
+    display: none;
+}
+}
 /*
 * === OVERLAY ===
 */
