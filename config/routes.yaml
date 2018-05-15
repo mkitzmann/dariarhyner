@@ -5,3 +5,15 @@ index:
 ArtworkRoute:
     path: /artwork/{artwork_slug}
     controller: App\Controller\ArtworkController::ViewArtwork
+
+AboutRoute:
+    path: /about
+    controller: App\Controller\HomeController::ViewAbout
+
+NewsRoute:
+    path: /news
+    controller: App\Controller\NewsController::ViewNews
+
+SingleNewsRoute:
+    path: /news/{news_slug}
+    controller: App\Controller\NewsController::ViewSingleNews

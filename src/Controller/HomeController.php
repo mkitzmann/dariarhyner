@@ -2,7 +2,7 @@
 
 namespace App\Controller;
 
-use App\Entity\Project;
+use App\Entity\Artwork;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -12,7 +12,11 @@ class HomeController extends Controller
 
     public function indexAction(Request $request)
     {
-        return $this->render('home/index.html.twig');
+        $repo = $this->getDoctrine()->getRepository(Artwork::class);
+        $artworks = $repo->findAll();
+
+        return $this->render('home/index.html.twig',array(
+            'artworks' => $artworks));
     }
 
     public function AboutAction()

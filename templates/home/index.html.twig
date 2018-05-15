@@ -1,49 +1,28 @@
-  {% extends 'base.html.twig' %}
+{% extends 'base.html.twig' %}
 
- {% block body %}
- <div class="content">
+{% block body %}
+    <div class="social-buttons">
+        <a href="https://www.facebook.com/dariarhyner/">FACEBOOK</a>
+        <a href="https://www.instagram.com/dariarhyner/">INSTAGRAM</a>
+        <a href="#newsletter">NEWSLETTER</a>
+    </div>
+    
+    <div class="content">
         <div class="image-grid">
 
-            <div class="image-wrapper large-image">
-                <a href="bunter-herbst.html">
-                    <img src="img/art/DSC_8615a.jpg">
-                    <div class="image-caption">Bunter Herbst</div>
+{% for artwork in artworks %}
+            <div class="image-wrapper">
+                <a href="/artwork/{{ artwork.slug }}">
+                    <img src="/art/{{ artwork.image }}">
+                    <div class="image-caption">{{ artwork.title }}</div>
                 </a>
             </div>
-
-            <div class="image-wrapper small-image">
-                <img src="img/art/DSC_8610a.jpg">
-                <div class="image-caption">Cassis</div>
-            </div>
-            <div class="image-wrapper">
-                <img src="img/Glue-Velvet-e1518797457440-1024x1024.jpg">
-                <div class="image-caption">Glue Velvet</div>
-            </div>
-            <div class="image-wrapper">
-                <a href="vanilla-sky.html">
-                    <img src="img/art/DSC_8605c.jpg">
-                    <div class="image-caption">Vanilla Sky</div>
-                </a>
-            </div>
-            <div class="image-wrapper small-image">
-                <img src="img/PInk-1.jpg">
-                <div class="image-caption">Pink</div>
-            </div>
-            <div class="image-wrapper large-image">
-                <img src="img/art/DSC_8617b.jpg">
-                <div class="image-caption">Sunscript</div>
-            </div>
-            <div class="image-wrapper large-image">
-                <img src="img/art/DSC_8596b.jpg">
-                <div class="image-caption">Pink</div>
-            </div>
-            <div class="image-wrapper small-image">
-                <img src="img/art/DSC_8600c.jpg">
-                <div class="image-caption">Sunscript</div>
-            </div>
+{% endfor %}
+        
         </div>
 
     </div>
 
-     
- {% endblock %}
+
+
+{% endblock %}

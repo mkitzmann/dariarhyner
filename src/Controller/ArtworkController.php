@@ -15,7 +15,6 @@ class ArtworkController extends Controller
      */
     public function ViewArtwork(Artwork $artwork)
     {
-
         return $this->render('home/single.html.twig',array(
             'artwork' => $artwork));
     }

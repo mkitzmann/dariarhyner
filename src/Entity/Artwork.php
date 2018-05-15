@@ -3,6 +3,11 @@
 namespace App\Entity;
 use Doctrine\ORM\Mapping as ORM;
 
+/**
+ * @ORM\Entity
+ * @ORM\Table(name="artwork")
+ */
+
 class Artwork
 {
 
@@ -32,6 +37,12 @@ class Artwork
      * @var string
      */
     private $series;
+
+       /**
+     * @ORM\Column(type="string")
+     * @var string
+     */
+    private $description;
 
     /**
      * @ORM\Column(type="integer")
@@ -94,9 +105,17 @@ class Artwork
     /**
      * @return string
      */
-    public function getText()
+    public function getSeries()
     {
-        return $this->text;
+        return $this->series;
+    }
+
+      /**
+     * @param string $series
+     */
+    public function setSeries(string $series)
+    {
+        $this->series = $series;
     }
 
     /**
@@ -156,7 +175,27 @@ class Artwork
         $this->image = $image;
     }
 
+    /**
+     * Get the value of description
+     *
+     * @return  string
+     */ 
+    public function getDescription()
+    {
+        return $this->description;
+    }
 
+    /**
+     * Set the value of description
+     *
+     * @param  string  $description
+     *
+     * @return  self
+     */ 
+    public function setDescription(string $description)
+    {
+        $this->description = $description;
 
-
+        return $this;
+    }
 }

@@ -21,27 +21,23 @@
             <div class="sidebar">
                 <div class="logo">
                     <a href="index.html" class="active">
-                        <img class="logo" src="img/logo_dr.svg">
+                        <img class="logo" src="{{ asset("img/logo_dr.svg")}}">
                     </a>
                 </div>
                 <nav>
                     <ul>
                         <li>
-                            <a href="index.html" class="active">ARTWORK</a>
+                            <a href="/" class="active">ARTWORK</a>
                         </li>
                         <li>
-                            <a href="">ABOUT</a>
+                            <a href="/about">ABOUT</a>
                         </li>
                         <li>
-                            <a href="">NEWS</a>
+                            <a href="/news">NEWS</a>
                         </li>
                     </ul>
                 </nav>
-                <div class="social-buttons">
-                    <a href="https://www.facebook.com/dariarhyner/">FACEBOOK</a>
-                    <a href="https://www.facebook.com/dariarhyner/">INSTAGRAM</a>
-                    <a href="#newsletter">NEWSLETTER</a>
-                </div>
+</div>
             {% endblock %}
 
             {% block body %}{% endblock %}
