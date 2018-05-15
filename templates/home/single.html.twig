@@ -2,18 +2,21 @@
 
  {% block body %}
         <div class="image-single-caption">
-            {{ artwork.title }}<br>
-            {{ artwork.series }} / {{ artwork.year }}<br>
+        <div class="image-single-text">
+            <span class="bold">{{ artwork.title }}</span><br>
+             {{ artwork.series }} / {{ artwork.year }}<br>
             {{ artwork.description }}
+            </div>
+            <div class="image-links">
+            <a href="">PREV</a> / <a href="">OVERVIEW</a> / <a href="">NEXT</a>
+            </div>
         </div>
 
     <div class="content">
-        <div class="image-single">
   
-            <div class="image-single-wrapper">
-                <img src="/art/{{ artwork.image }}">
+            <div class="image-single-wrapper" style="background-image:url('/art/{{ artwork.image }}')">
             </div>
-   </div>
+
    </div>
      
  {% endblock %}

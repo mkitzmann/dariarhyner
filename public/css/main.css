@@ -1,6 +1,6 @@
 * {
     font-family: 'Montserrat', sans-serif;
-    //border: 1px solid red;
+    border: 1px solid red;
 }
 
 html, body {
@@ -16,7 +16,7 @@ body {
 
 .sidebar {
    height: 100%;
-min-width: 10rem;
+min-width: 14rem;
    position: fixed;
    background-color: #fff;
 }
@@ -25,9 +25,10 @@ min-width: 10rem;
     display: flex;
     justify-content: center;
     flex-flow: row wrap;
-    width: 100vw;
-    max-width: 1400px;
-    padding-top: 3vh;
+    width: 100%;
+    max-width: 1200px;
+    //padding-top: 3vh;
+    margin: 2rem 2rem 2rem 16rem;
     //border: 1px solid green;
 }
 
@@ -57,16 +58,16 @@ a:hover {
 a.active {
     font-weight: 500;
 }
-.image-grid {
+.image-grid, .news-grid {
     display: flex;
     justify-content: center;
     flex-flow: row wrap;
-    max-width: 1200px;
-    padding-left: 10rem;
+    max-width: 1000px;
+    padding-left: 14rem;
 }
+
 .image-wrapper {
-    width: 40%;
-    max-width: 900px;
+    flex: 40%;
     padding: 1rem;
     text-align: right;
 }
@@ -76,11 +77,11 @@ a.active {
 }
 
 .large-image {
-    width: 60%;
+    flex: 60%;
 }
 
 .small-image {
-    width: 20%;
+    flex: 20%;
 }
 
 .image-caption {
@@ -90,29 +91,73 @@ a.active {
     color: #ccc;
 }
 
+.image-links {
+    margin-top: 20px;
+}
+
 .image-single {
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    flex-flow: row wrap;
-   width: 80vh;
-   width: 1400px;
-    padding-left: 10rem;
+    //display: flex;
+    //justify-content: center;
+    //align-items: center;
+    //flex-flow: row wrap;
+    //max-width: 1000px;
+    //margin-left: 14rem;
+    //max-height: 100%;
+    //padding-bottom: 2rem;
 }
 
 .image-single-wrapper {
-    text-align: right;
-    height: 90vh;
-    padding: 0 2rem;
+    height: 100%;
+    width: 100%;
+    background-repeat:no-repeat;
+    background-size:contain;
+    background-position: center; 
+    //display: flex;
+    //padding: 0 1rem;
+    //text-align: center;
+    //object-fit: contain;
 }
-
 .image-single-caption {
 position: fixed;
-bottom: 5rem;
+bottom: 1rem;
 margin-left: 40px;
     font-size: 0.8em;
     font-weight: 300;
     color: #ccc;
+}
+
+.news-wrapper {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+
+    max-width: 1200px;
+    padding: 1rem;
+    text-align: left;
+}
+.news-image {
+flex: 50%;
+}
+.news-body {
+    flex: 50%;
+    padding: 1rem;
+}
+
+h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size:1.2rem;
+}
+
+p {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    font-size:1.0rem;
+}
+
+.bold {
+    font-weight: 300;
+    color: #000;
 }
 
 .social-buttons {
@@ -131,17 +176,18 @@ margin-left: 40px;
 }
 
 img {
-    max-width: 100%;
-    max-height: 100%;
+    //max-width: 100%;
+    //max-height: 100%;
 }
 
 @media screen and (orientation: portrait) {
     .sidebar {
          height: 7rem;
-         min-width: 100%;
+         width: 100%;
     }
     .content {
-        margin-top: 8rem;
+        padding-top: 2vh;
+        margin-left: 2rem;
     }
     .logo {
         width: 3rem;
@@ -149,10 +195,9 @@ img {
     }
     nav ul {
         position: absolute;
-        right: 6vw;
+        right: 4vw;
         top: 2rem;
     }
-    
     nav li{
         display: inline;
         margin: 20px 2vw;
@@ -161,21 +206,22 @@ img {
         padding: 0px;
         margin: 0px;
     }
-    .image-grid {
+    .image-grid, .news-grid {
         padding-left: 0;
+        margin: 0 4vw;
     }
+
     .image-single-wrapper {
-        text-align: right;
-        height: 70vh;
-        padding: 0 6vw;
+        padding: 0 1rem;
         margin: 0px;
     }
+
     .social-buttons {
         bottom: 0;
         margin: 0;
         padding: 1rem 4vw;
         width: 100%;
-background-color: #fff;
+        background-color: #fff;
     }
     .social-buttons a {
         display: inline;
@@ -185,17 +231,34 @@ background-color: #fff;
 }
 
 @media screen and (max-width: 600px) {
+    .content {
+        padding-top: 0;
+    }
     .image-wrapper {
-    width: 84%;
+    flex: 100%;
     margin-bottom: 2vh;
     }
     .image-wrapper:nth-child(odd) {
         text-align: right;
     }
     .image-single-wrapper {
-        width: 84%;
+        //height: 100vh;
+        //display: flex;
+        //flex-flow: column nowrap;
+        //align-items: center;
+        //width: 84%;
+        //text-align: center;
     }
-
+    .news-image, .news-body {
+        flex: 100%;
+    }
+    .news-wrapper {
+        flex-flow: column wrap;
+    flex: 100%;
+    }
+    .image-single-text {
+        display: none;
+    }
 }
 
 /*
