@@ -422,6 +422,8 @@ tr:hover {
     text-align: center;
 }
 
-.admin-add-artwork {
-    display: inline-block;
+.admin-add-button a{
+ color: #000 !important;
+ font-weight: 300;
+ font-size: 1.2em;
 }

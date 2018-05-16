@@ -9,6 +9,7 @@ use App\Entity\Artwork;
 use App\Service\FileUploader;
 use Cocur\Slugify\Slugify;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\ParamConverter;
+use Symfony\Component\HttpFoundation\Response;
 
 class AdminController extends Controller
 {
@@ -39,7 +40,7 @@ class AdminController extends Controller
             $em->persist($artwork);
             $em->flush();
 
-            return $this->redirect($this->generateUrl('AdminRoute'));
+            return $this->redirect('/admin');
         }
 
         $repo = $this->getDoctrine()->getRepository(Artwork::class);
@@ -70,5 +71,31 @@ class AdminController extends Controller
     $entityManager->flush();
     
     return $this->redirect($this->generateUrl('AdminRoute'));
+    }
+
+     /**
+     * @ParamConverter("artwork", class="App\Entity\Artwork", options={"mapping": {"artwork_slug": "slug"}})
+     */
+    public function ArtworkDelete(Artwork $artwork)
+    {
+        $entityManager = $this->getDoctrine()->getManager();
+        $entityManager->remove($artwork);
+
+        $entityManager->flush();
+
+        $repo = $entityManager->getRepository(Artwork::class);
+        $artworks = $repo->findBy([], ['position' => 'ASC']);        
+
+        $i=1;
+        foreach($artworks as $item){
+            $item->setPosition($i);
+            $i++;
+        }
+
+        $entityManager->flush();
+
+        //$dump = var_dump($artworks);
+        //return new response($dump);
+        return $this->redirectToRoute('AdminRoute');
     }
 }

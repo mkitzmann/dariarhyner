@@ -23,5 +23,9 @@ AdminRoute:
     controller: App\Controller\AdminController::AdminIndex
 
 ArtworkPositionRoute:
-    path: /admin/artwork/{artwork_slug}/{position}
+    path: /admin/artwork/{artwork_slug}/position/{position}
     controller: App\Controller\AdminController::ArtworkPosition
+
+ArtworkdeleteRoute:
+    path: /admin/artwork/{artwork_slug}/delete
+    controller: App\Controller\AdminController::ArtworkDelete
