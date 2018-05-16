@@ -23,3 +23,5 @@ yarn-error.log
 ###< symfony/web-server-bundle ###
 
 /public/art/
+/config/packages/security.yaml
+/public/.htaccess
