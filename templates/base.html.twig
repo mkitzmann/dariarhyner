@@ -13,6 +13,22 @@
             <link rel="stylesheet" type="text/css" href="{{ asset("css/main.css")}}">
         {% endblock %}
 
+        {% block icons %}
+            <link rel="apple-touch-icon" sizes="57x57" href="{{ asset("icons/apple-icon-57x57.png")}}">
+            <link rel="apple-touch-icon" sizes="60x60" href="{{ asset("icons/apple-icon-60x60.png")}}">
+            <link rel="apple-touch-icon" sizes="72x72" href="{{ asset("icons/apple-icon-72x72.png")}}">
+            <link rel="apple-touch-icon" sizes="76x76" href="{{ asset("icons/apple-icon-76x76.png")}}">
+            <link rel="apple-touch-icon" sizes="114x114" href="{{ asset("icons/apple-icon-114x114.png")}}">
+            <link rel="apple-touch-icon" sizes="120x120" href="{{ asset("icons/apple-icon-120x120.png")}}">
+            <link rel="apple-touch-icon" sizes="144x144" href="{{ asset("icons/apple-icon-144x144.png")}}">
+            <link rel="apple-touch-icon" sizes="152x152" href="{{ asset("icons/apple-icon-152x152.png")}}">
+            <link rel="apple-touch-icon" sizes="180x180" href="{{ asset("icons/apple-icon-180x180.png")}}">
+            <link rel="icon" type="image/png" sizes="192x192" href="{{ asset("icons/android-icon-192x192.png")}}">
+            <link rel="icon" type="image/png" sizes="32x32" href="{{ asset("icons/favicon-32x32.png")}}">
+            <link rel="icon" type="image/png" sizes="96x96" href="{{ asset("icons/favicon-96x96.png")}}">
+            <link rel="icon" type="image/png" sizes="16x16" href="{{ asset("icons/favicon-16x16.png")}}">
+        {% endblock %}
+
         {% block javascripts %}{% endblock %}
     </head>
 
@@ -37,38 +53,38 @@
                         </li>
                     </ul>
                 </nav>
-</div>
-            {% endblock %}
+            </div>
+        {% endblock %}
 
-            {% block body %}{% endblock %}
-            <div id="newsletter" class="overlay">
-                <a class="close-overlay" href="#"></a>
-                <div class="popup">
+        {% block body %}{% endblock %}
+        <div id="newsletter" class="overlay">
+            <a class="close-overlay" href="#"></a>
+            <div class="popup">
 
-                    <a class="close" href="#">&times;</a>
-                    <div class="popup-content">
-                        <!-- Begin MailChimp Signup Form -->
+                <a class="close" href="#">&times;</a>
+                <div class="popup-content">
+                    <!-- Begin MailChimp Signup Form -->
 
-                        <div id="mc_embed_signup">
-                            <form action="https://dariarhyner.us18.list-manage.com/subscribe/post?u=6e011c3619f5335be6de208c2&amp;id=8b1c90e538" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate="novalidate">
-                                <div id="mc_embed_signup_scroll">
-                                    <label for="mce-EMAIL">Sign up to my Newsletter</label>
-                                    <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required="required">
-                                    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-                                    <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_6e011c3619f5335be6de208c2_8b1c90e538" tabindex="-1" value=""></div>
-                                    <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
-                                </div>
-                            </form>
-                        </div>
-
-                        <!--End mc_embed_signup-->
+                    <div id="mc_embed_signup">
+                        <form action="https://dariarhyner.us18.list-manage.com/subscribe/post?u=6e011c3619f5335be6de208c2&amp;id=8b1c90e538" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate="novalidate">
+                            <div id="mc_embed_signup_scroll">
+                                <label for="mce-EMAIL">Sign up to my Newsletter</label>
+                                <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required="required">
+                                <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                                <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_6e011c3619f5335be6de208c2_8b1c90e538" tabindex="-1" value=""></div>
+                                <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+                            </div>
+                        </form>
                     </div>
 
+                    <!--End mc_embed_signup-->
                 </div>
-            </div>
 
+            </div>
         </div>
 
-    </body>
+    </div>
+
+</body>
 
 </html>

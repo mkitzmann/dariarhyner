@@ -1,0 +1,27 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div class="social-buttons">
+        <a href="https://www.facebook.com/dariarhyner/">FACEBOOK</a>
+        <a href="https://www.instagram.com/dariarhyner/">INSTAGRAM</a>
+        <a href="#newsletter">NEWSLETTER</a>
+    </div>
+    
+    <div class="content">
+        <div class="news-grid">
+            {% for newsItem in news %}
+                <div class="news-wrapper">
+
+                    <div class="news-image">
+                        <img src="/art/{{ newsItem.image }}">
+                    </div>
+                    <div class="news-body">
+                        <h2>{{ newsItem.title }}</h2>
+                        <p>{{ newsItem.content }}</p>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+
+{% endblock %}
