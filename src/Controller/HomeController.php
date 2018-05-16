@@ -13,7 +13,7 @@ class HomeController extends Controller
     public function indexAction(Request $request)
     {
         $repo = $this->getDoctrine()->getRepository(Artwork::class);
-        $artworks = $repo->findAll();
+        $artworks = $repo->findBy([], ['position' => 'ASC']);
 
         return $this->render('home/index.html.twig',array(
             'artworks' => $artworks));
