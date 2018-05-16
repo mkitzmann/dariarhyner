@@ -17,3 +17,11 @@ NewsRoute:
 SingleNewsRoute:
     path: /news/{news_slug}
     controller: App\Controller\NewsController::ViewSingleNews
+
+AdminRoute:
+    path: /admin
+    controller: App\Controller\AdminController::AdminIndex
+
+ArtworkPositionRoute:
+    path: /admin/artwork/{artwork_slug}/{position}
+    controller: App\Controller\AdminController::ArtworkPosition

@@ -63,6 +63,11 @@ class Artwork
     private $image;
 
     /**
+     * @ORM\Column(type="string")
+     */
+    private $gridsize;
+
+    /**
      * @return int
      */
     public function getId(): int
@@ -143,7 +148,7 @@ class Artwork
     }
 
     /**
-     * @return string
+     * @return int
      */
     public function getPosition()
     {
@@ -151,9 +156,9 @@ class Artwork
     }
 
     /**
-     * @param string $position
+     * @param int $position
      */
-    public function setPosition(string $position)
+    public function setPosition(int $position)
     {
         $this->position = $position;
     }
@@ -195,6 +200,18 @@ class Artwork
     public function setDescription(string $description)
     {
         $this->description = $description;
+
+        return $this;
+    }
+
+    public function getGridsize(): ?string
+    {
+        return $this->gridsize;
+    }
+
+    public function setGridsize(string $gridsize): self
+    {
+        $this->gridsize = $gridsize;
 
         return $this;
     }

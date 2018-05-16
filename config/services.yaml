@@ -2,7 +2,7 @@
 # https://symfony.com/doc/current/best_practices/configuration.html#application-related-configuration
 parameters:
     thumbnail_directory: '%kernel.project_dir%/public/art'
-    photo_directory: '%kernel.project_dir%/public/art'
+    artwork_directory: '%kernel.project_dir%/public/art'
     locale: 'en'
 
 services:
@@ -32,4 +32,4 @@ services:
 twig:
     globals:
         thumbnail_directory: '%thumbnail_directory%'
-        photo_directory: '%photo_directory%'
+        artwork_directory: '%artwork_directory%'

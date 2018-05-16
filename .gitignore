@@ -26,3 +26,7 @@ yarn-error.log
 /config/packages/security.yaml
 /public/.htaccess
 /public/.DS_Store
+###> friendsofphp/php-cs-fixer ###
+/.php_cs
+/.php_cs.cache
+###< friendsofphp/php-cs-fixer ###

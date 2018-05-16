@@ -376,28 +376,52 @@ img {
     font-weight: 200;
     font-size: 1em;
   }
+  input, select{
+    display: block;
+    width: 20rem;
+    max-width: 80vw;
+    font-size: 1.0rem;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 200;
+    margin: 0px 0 20px 0;
+    padding: 5px 10px;
+    background-color: #fff;
+}
 
-  input[type="submit" i] {
+
+  input[type="submit" i], button {
       background-color: #ccc;
-      border: 0;
       padding: 10px 20px;
+      border: 0;
       border-radius: 20px;
       margin: 10px 0 0 0;
       font-size: 0.9rem;
       cursor: pointer;
   }
-  input[type="email" i] {
-display: block;
-width: 15rem;
-max-width: 80vw;
-font-size: 1.0rem;
-font-family: "Montserrat", sans-serif;
-font-weight: 200;
-margin: 10px 0;
-}
+
 
 label {
     display: block;
-    margin: 0 0 15px 0;
-    font-weight: 400;
+    margin: 15px 0 15px 0;
+    font-weight: 200;
+}
+
+table {
+    align-self: center;
+}
+td {
+    padding: 1rem;
+}
+
+tr:hover {
+    background-color: #eee;
+}
+
+.admin-thumb-image-wrapper {
+    height: 80px;
+    text-align: center;
+}
+
+.admin-add-artwork {
+    display: inline-block;
 }
