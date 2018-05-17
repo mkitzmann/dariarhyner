@@ -1,0 +1,48 @@
+liip_imagine:
+    driver: "gd"
+
+    filter_sets:
+
+        thumbnail:
+
+            jpeg_quality:          85
+            png_compression_level: 8
+
+            filters:
+                auto_rotate: ~
+                strip: ~
+                downscale:
+                    max:          [200, 200]
+
+        small:
+
+            jpeg_quality:          85
+            png_compression_level: 8
+
+            filters:
+                auto_rotate: ~
+                strip: ~
+                scale:
+                    dim:          [500, 500]    
+                
+        medium:
+
+            jpeg_quality:          85
+            png_compression_level: 8
+
+            filters:
+                auto_rotate: ~
+                strip: ~
+                scale:
+                    dim:          [1000, 1000]
+
+        large:
+
+            jpeg_quality:          85
+            png_compression_level: 8
+
+            filters:
+                auto_rotate: ~
+                strip: ~
+                scale:
+                    dim:          [1400, 1400]
