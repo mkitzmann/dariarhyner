@@ -1,0 +1,25 @@
+{% extends 'admin/base-admin.html.twig' %}
+
+{% block title %} | Edit Artwork{% endblock %}
+
+{% block body %}
+<div class="social-buttons admin-add-button">
+   <a href="{{ path('AdminRoute') }}"><svg width="16" height="16" viewBox="0 0 512 512" enable-background="new 0 0 512 512"><g class="nc-icon-wrapper" fill="#111111"><path d="M352 115.4L331.3 96 160 256l171.3 160 20.7-19.3L201.5 256z"></path></g></svg>BACK</a>
+</div>
+    <div class="content">
+        <div class="news-grid">
+                            <div class="news-wrapper">
+
+                    <div class="news-image">
+                        <img src="{{ asset('/art/' ~ artworkimage) | imagine_filter('small') }}"  />
+                    </div>
+                    <div class="news-body">
+    
+<h1>Edit Artwork</h1>
+    {{ include('admin/artwork/_form.html.twig', {'button_label': 'Update'}) }}
+
+ 
+</div>
+</div>
+</div>
+{% endblock %}
