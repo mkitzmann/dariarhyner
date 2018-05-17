@@ -240,6 +240,7 @@ img {
     .social-buttons a {
         display: inline;
         margin: 0 10px;
+        font-size: 0.8em;
     }
     
 }
@@ -281,7 +282,7 @@ padding: 0;
         max-width: 40vh;
     }
     .social-buttons a {
-        font-size: 0.8em;
+        font-size: 0.6em;
     }
     .impressum {
         margin-top: 0;
