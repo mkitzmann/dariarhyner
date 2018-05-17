@@ -78,18 +78,18 @@ a.active {
 
 .image-wrapper:nth-child(odd) {
     text-align: left;
-    padding: 0 1rem 0 0 ;
+    padding: 0 1rem 3rem 0 ;
 }
 
 .image-wrapper:last-child {
     padding-bottom: 4rem !important;
 }
 
-.large-image {
+.large {
     flex: 60%;
 }
 
-.small-image {
+.small {
     flex: 20%;
 }
 
