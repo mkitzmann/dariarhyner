@@ -2,13 +2,14 @@
 namespace App\Service;
 
 use Symfony\Component\HttpFoundation\File\UploadedFile;
+use Symfony\Component\HttpFoundation\Response;
 
 class FileUploader
 {
 
     public function upload(UploadedFile $file, $directory )
     {
-        $fileName = md5(uniqid()).'.'.$file->guessExtension();
+        $fileName = $file->getClientOriginalName();
 
         $file->move($directory, $fileName);
 
