@@ -25,7 +25,7 @@ body {
 .content {
     display: flex;
     justify-content: center;
-    flex-flow: row wrap;
+    flex-flow: row nowrap;
     width: 100vw;
     max-width: 1400px;
     margin: 4vh 2rem 4vh 16rem;
@@ -459,4 +459,8 @@ tr:hover {
  color: #000 !important;
  font-weight: 300;
  font-size: 1.2em;
+}
+
+.admin {
+    flex-flow: column wrap;
 }

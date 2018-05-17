@@ -27,8 +27,7 @@ class ArtworkType extends AbstractType
                 'Small' => 'small',
                 'Large' => 'large',
             ),))
-            ->add('image', FileType::class, array('label' => 'Artwork (Image file)'))
-            ->add('save', SubmitType::class, array('label' => 'Add Artwork'))
+            ->add('image', FileType::class, array('label' => 'Artwork (Image file)', 'required' => false))
             ->getForm();
         ;
     }
@@ -39,4 +38,5 @@ class ArtworkType extends AbstractType
             'data_class' => Artwork::class,
         ));
     }
+
 }

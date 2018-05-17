@@ -10,7 +10,7 @@
         </a>
      </div>            
     </div>
-    <div class="content">
+<div class="content">
     <table>
     {% for item in items %}
     <tr>
@@ -43,8 +43,9 @@
           <td>{{item.gridsize}}
     </td>
 <td>
-
+    <a href="{{ path('ArtworkEditRoute', {'artwork_slug': item.slug}) }}">
     <svg xmlns="http://www.w3.org/2000/svg" x="0" y="0" width="16" height="16" viewBox="0 0 512 512"><g class="nc-icon-wrapper" fill="#111111"><path d="M162.997 439.574l-90.569-90.572L322.783 98.656l90.569 90.572z"></path><path d="M471.723 88.393l-48.115-48.114c-11.723-11.724-31.558-10.896-44.304 1.85l-45.202 45.203 90.569 90.568 45.202-45.202c12.743-12.746 13.572-32.582 1.85-44.305z"></path><path d="M64.021 363.252L32 480l116.737-32.021z"></path></g></svg>
+    </a>
 
     </td>
     <td>
@@ -78,10 +79,8 @@
                 <a class="close" href="#">&times;</a>
                 <div class="popup-content">
 
-                    {{ form_start(form) }}
-                {{ form_row(form.title) }}
-                {{ form_row(form.image) }}
-                {{ form_end(form) }}
+            {{ include('admin/artwork/_form.html.twig', {'button_label': 'Save'}) }}
+
     </div>
         </div>
 {% endblock %}

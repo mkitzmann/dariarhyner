@@ -10,6 +10,7 @@ use App\Service\FileUploader;
 use Cocur\Slugify\Slugify;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\ParamConverter;
 use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\HttpFoundation\File\File;
 
 class AdminController extends Controller
 {
@@ -97,5 +98,36 @@ class AdminController extends Controller
         //$dump = var_dump($artworks);
         //return new response($dump);
         return $this->redirectToRoute('AdminRoute');
+    }
+
+        /**
+     * @ParamConverter("artwork", class="App\Entity\Artwork", options={"mapping": {"artwork_slug": "slug"}})
+     */
+    public function EditArtwork(Request $request, Artwork $artwork): Response
+    {
+        $artworkImage = $artwork->getImage();
+
+        $artwork->setImage( 
+            new File($this->getParameter('artwork_directory').'/'.$artworkImage
+        ));
+
+        $form = $this->createForm(ArtworkType::class, $artwork);
+        $form->handleRequest($request);
+        
+        if ($form->isSubmitted() && $form->isValid()) {
+
+            if($artwork->getImage()==NULL){
+                $artwork->setImage($artworkImage);
+            }
+            $this->getDoctrine()->getManager()->flush();
+
+            return $this->redirectToRoute('AdminRoute');
+        }
+
+        return $this->render('admin/artwork/edit.html.twig', [
+            'artwork' => $artwork,
+            'form' => $form->createView(),
+            'artworkimage' => $artworkImage,
+        ]);
     }
 }

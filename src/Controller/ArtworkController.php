@@ -4,10 +4,13 @@ namespace App\Controller;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\ParamConverter;
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\File\File;
 use App\Service\FileUploader;
 use App\Service\AdjacentItems;
 use App\Entity\Artwork;
+use App\Form\ArtworkType;
 use Cocur\Slugify\Slugify;
+use Symfony\Component\Routing\Annotation\Route;
 
 class ArtworkController extends Controller
 {
