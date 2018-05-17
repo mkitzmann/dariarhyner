@@ -19,7 +19,7 @@ class HomeController extends Controller
             'artworks' => $artworks));
     }
 
-    public function AboutAction()
+    public function ViewAbout()
     {
         return $this->render('home/about.html.twig');
     }

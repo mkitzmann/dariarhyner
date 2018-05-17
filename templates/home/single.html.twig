@@ -10,14 +10,16 @@
             {{ artwork.description }}
             </div>
             <div class="image-links">
-            <a href="{{ prevlink.slug }}">PREV</a> / <a href="/">OVERVIEW</a> / <a href="{{ nextlink.slug }}">NEXT</a>
+            <a href="{{ prevlink.slug }}">PREV</a> / <a href="/">GALLERY</a> / <a href="{{ nextlink.slug }}">NEXT</a>
             </div>
         </div>
 
     <div class="content">
   
             <div class="image-single-wrapper">
+            <a href="/">
             <img src="{{ asset('/art/' ~ artwork.image ) | imagine_filter('medium') }}" srcset="{{ asset('/art/' ~ artwork.image ) | imagine_filter('small') }} 600w,{{ asset('/art/' ~ artwork.image ) | imagine_filter('medium') }} 1000w, {{ asset('/art/' ~ artwork.image ) | imagine_filter('large') }} 1400w"/>
+            </a>
             </div>
 
    </div>

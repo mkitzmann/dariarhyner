@@ -3,12 +3,8 @@
 {% block title %} | News{% endblock %}
 
 {% block body %}
-    <div class="social-buttons">
-        <a href="https://www.facebook.com/dariarhyner/">FACEBOOK</a>
-        <a href="https://www.instagram.com/dariarhyner/">INSTAGRAM</a>
-        <a href="#newsletter">NEWSLETTER</a>
-    </div>
-    
+{% include 'modules/social-buttons.html.twig' %}
+
     <div class="content">
         <div class="news-grid">
             {% for newsItem in news %}
@@ -23,7 +19,9 @@
                     </div>
                 </div>
             {% endfor %}
+
         </div>
+                              <div class="bottom-spacer" />
     </div>
 
 {% endblock %}
