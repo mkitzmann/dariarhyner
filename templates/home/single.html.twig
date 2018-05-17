@@ -17,7 +17,7 @@
     <div class="content">
   
             <div class="image-single-wrapper">
-            <img src="/art/{{ artwork.image }}">
+            <img src="{{ asset('/art/' ~ artwork.image ) | imagine_filter('medium') }}" srcset="{{ asset('/art/' ~ artwork.image ) | imagine_filter('small') }} 600w,{{ asset('/art/' ~ artwork.image ) | imagine_filter('medium') }} 1000w, {{ asset('/art/' ~ artwork.image ) | imagine_filter('large') }} 1400w"/>
             </div>
 
    </div>

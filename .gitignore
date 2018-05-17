@@ -23,6 +23,7 @@ yarn-error.log
 ###< symfony/web-server-bundle ###
 
 /public/art/
+/public/media/
 /config/packages/security.yaml
 /public/.htaccess
 /public/.DS_Store

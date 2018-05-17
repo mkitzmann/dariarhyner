@@ -17,7 +17,7 @@
 
           <td>
           <div class="admin-thumb-image-wrapper">
-          <img src="/art/{{item.image}}" class="admin-thumb-image">
+          <img src="{{ asset('/art/' ~ item.image) | imagine_filter('thumbnail') }}"  />
           </div>
     </td>
     <td>

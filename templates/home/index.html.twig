@@ -13,7 +13,7 @@
 {% for artwork in artworks %}
             <div class="image-wrapper">
                 <a href="/artwork/{{ artwork.slug }}">
-                    <img src="/art/{{ artwork.image }}">
+            <img src="{{ asset('/art/' ~ artwork.image ) | imagine_filter('medium') }}" srcset="{{ asset('/art/' ~ artwork.image ) | imagine_filter('small') }} 600w,{{ asset('/art/' ~ artwork.image ) | imagine_filter('medium') }} 1000w"/>
                     <div class="image-caption">{{ artwork.title }}</div>
                 </a>
             </div>
