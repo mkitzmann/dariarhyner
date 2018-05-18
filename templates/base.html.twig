@@ -43,13 +43,13 @@
                 <nav>
                     <ul>
                         <li>
-                            <a href="/" class="active">ARTWORK</a>
+                            <a href="/" class="{% if page == 'artwork' %}active{% endif %}">ARTWORK</a>
                         </li>
                         <li>
-                            <a href="/about">ABOUT</a>
+                            <a href="/about" class="{% if page == 'about' %}active{% endif %}">ABOUT</a>
                         </li>
                         <li>
-                            <a href="/news">NEWS</a>
+                            <a href="/news" class="{% if page == 'news' %}active{% endif %}">NEWS</a>
                         </li>
                     </ul>
                 </nav>

@@ -24,7 +24,8 @@ class ArtworkController extends Controller
         return $this->render('home/single.html.twig',array(
             'artwork' => $artwork,
             'nextlink' => $adjacentLinks['next'],
-            'prevlink' => $adjacentLinks['prev']
+            'prevlink' => $adjacentLinks['prev'],
+            'page' => 'artwork'
         ));
     }
     

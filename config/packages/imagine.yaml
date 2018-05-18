@@ -23,7 +23,7 @@ liip_imagine:
                 auto_rotate: ~
                 strip: ~
                 scale:
-                    dim:          [500, 500]    
+                    dim:          [600, 600]    
                 
         medium:
 

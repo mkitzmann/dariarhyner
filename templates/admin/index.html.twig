@@ -58,9 +58,12 @@
 
                 <a class="close" href="#">&times;</a>
                 <div class="popup-content">
-                Do you really want to delete "{{item.title}}"?
+                Do you really want to delete "{{item.title}}"?<p>
                     <form action="/admin/artwork/{{item.slug}}/delete">
-                          <input type="submit" value="Delete Artwork" />
+                          <button class="btn delete" type="submit">Delete Artwork</button>
+                    </form>
+                    <form action="/admin">
+                            <button class="btn-cancel">{{ cancel_label|default('Cancel') }}</button>
                     </form>
                 </div>
             </div>

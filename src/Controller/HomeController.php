@@ -16,12 +16,16 @@ class HomeController extends Controller
         $artworks = $repo->findBy([], ['position' => 'ASC']);
 
         return $this->render('home/index.html.twig',array(
-            'artworks' => $artworks));
+            'artworks' => $artworks,
+            'page' => 'artwork'
+        ));
     }
 
     public function ViewAbout()
     {
-        return $this->render('home/about.html.twig');
+        return $this->render('home/about.html.twig',array(
+            'page' => 'about'
+        ));
     }
 
 }

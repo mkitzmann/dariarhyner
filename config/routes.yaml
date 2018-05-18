@@ -10,9 +10,10 @@ AboutRoute:
     path: /about
     controller: App\Controller\HomeController::ViewAbout
 
-NewsRoute:
-    path: /news
-    controller: App\Controller\NewsController::ViewNews
+
+ImpressumRoute:
+    path: /Impressum
+    controller: App\Controller\ImpressumController::ViewImpressum
 
 SingleNewsRoute:
     path: /news/{news_slug}
