@@ -10,14 +10,9 @@ AboutRoute:
     path: /about
     controller: App\Controller\HomeController::ViewAbout
 
-
 ImpressumRoute:
     path: /Impressum
     controller: App\Controller\ImpressumController::ViewImpressum
-
-SingleNewsRoute:
-    path: /news/{news_slug}
-    controller: App\Controller\NewsController::ViewSingleNews
 
 AdminRoute:
     path: /admin
