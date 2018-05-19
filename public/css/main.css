@@ -62,7 +62,7 @@ a.active {
     display: flex;
     flex-flow: row wrap;
     padding-bottom: 10rem;
-    max-width: 1200px;
+    max-width: 1000px;
 }
 
 .image-wrapper {
@@ -180,7 +180,7 @@ li {
 padding-left: 0;
 }
 .bottom-spacer {
-    margin-bottom: 4rem;
+    margin-bottom: 6rem;
 }
 
 .bold {
@@ -260,7 +260,7 @@ img {
     .social-buttons a {
         display: inline;
         margin: 0 10px;
-        font-size: 0.8em;
+        font-size: 0.6em;
     }
     
 }
@@ -295,14 +295,15 @@ img {
        padding: 1rem 0;
     }
     .news-wrapper {
-display: block;
-padding: 0;
+        display: block;
+        padding: 0;
     }
     .image-grid {
         max-width: 40vh;
     }
     .social-buttons a {
         font-size: 0.6em;
+        margin: 0 5px;
     }
     .impressum {
         margin-top: 0;
