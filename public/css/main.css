@@ -118,10 +118,6 @@ a.active {
     color: #ccc;
 }
 
-.news-grid {
-    max-width: 1000px;
-}
-
 .news-wrapper {
     display: flex;
     flex-flow: row nowrap;
