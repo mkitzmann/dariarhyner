@@ -4,12 +4,19 @@
 {% include 'modules/social-buttons.html.twig' %}
     
     <div class="content">
-        <div class="image-grid">
+        <div class="image-grid" id="image-grid">
 
 {% for artwork in artworks %}
             <div class="image-wrapper {{ artwork.gridsize }}">
                 <a href="/artwork/{{ artwork.slug }}" name="{{ artwork.slug }}">
-            <img src="{{ asset('/art/' ~ artwork.image ) | imagine_filter('medium') }}" srcset="{{ asset('/art/' ~ artwork.image ) | imagine_filter('small') }} 800w,{{ asset('/art/' ~ artwork.image ) | imagine_filter('medium') }} 1400w"/>
+
+              {% if artwork.gridsize == 'small' %}  
+                <img data-src="{{ asset('/art/' ~ artwork.image ) | imagine_filter('small') }}">
+              {% else %}
+            <img data-src="{{ asset('/art/' ~ artwork.image ) | imagine_filter('medium') }}" data-srcset="{{ asset('/art/' ~ artwork.image ) | imagine_filter('small') }} 800w,{{ asset('/art/' ~ artwork.image ) | imagine_filter('medium') }} 1400w"/>
+            {% endif %}
+
+            
                     <div class="image-caption">{{ artwork.title }}</div>
                 </a>
             </div>
@@ -19,6 +26,12 @@
 <div class="bottom-spacer" />
     </div>
 
+{% endblock %}
 
-
+{% block javascript %}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-lazyload/8.7.1/lazyload.min.js"></script>
+<script>
+    var myLazyLoad = new LazyLoad();
+</script>
+    
 {% endblock %}
