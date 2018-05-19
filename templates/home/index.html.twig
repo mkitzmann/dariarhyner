@@ -8,7 +8,7 @@
 
 {% for artwork in artworks %}
             <div class="image-wrapper {{ artwork.gridsize }}">
-                <a href="/artwork/{{ artwork.slug }}">
+                <a href="/artwork/{{ artwork.slug }}" name="{{ artwork.slug }}">
             <img src="{{ asset('/art/' ~ artwork.image ) | imagine_filter('medium') }}" srcset="{{ asset('/art/' ~ artwork.image ) | imagine_filter('small') }} 800w,{{ asset('/art/' ~ artwork.image ) | imagine_filter('medium') }} 1400w"/>
                     <div class="image-caption">{{ artwork.title }}</div>
                 </a>
