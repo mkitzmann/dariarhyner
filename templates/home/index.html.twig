@@ -11,13 +11,12 @@
                 <a href="/artwork/{{ artwork.slug }}" name="{{ artwork.slug }}">
 
               {% if artwork.gridsize == 'small' %}  
-                <img data-src="{{ asset('/art/' ~ artwork.image ) | imagine_filter('small') }}">
+                <img data-src="{{ asset('/art/' ~ artwork.image ) | imagine_filter('small') }}" alt="artwork.title" />
               {% else %}
-            <img data-src="{{ asset('/art/' ~ artwork.image ) | imagine_filter('medium') }}" data-srcset="{{ asset('/art/' ~ artwork.image ) | imagine_filter('small') }} 800w,{{ asset('/art/' ~ artwork.image ) | imagine_filter('medium') }} 1400w"/>
+            <img data-src="{{ asset('/art/' ~ artwork.image ) | imagine_filter('medium') }}" data-srcset="{{ asset('/art/' ~ artwork.image ) | imagine_filter('small') }} 800w,{{ asset('/art/' ~ artwork.image ) | imagine_filter('medium') }} 1400w"  alt="artwork.title" />
             {% endif %}
 
-            
-                    <div class="image-caption">{{ artwork.title }}</div>
+                <div class="image-caption">{{ artwork.title }}</div>
                 </a>
             </div>
 {% endfor %}
