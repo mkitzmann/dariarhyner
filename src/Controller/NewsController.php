@@ -24,7 +24,8 @@ class NewsController extends Controller
      */
     public function index(NewsRepository $newsRepository): Response
     {
-        $news = $newsRepository->findAll();
+        $repo = $this->getDoctrine()->getRepository(News::class);
+        $news = $repo->findBy([], ['date' => 'DESC']);
         return $this->render('home/news.html.twig', [
             'news' => $news,
             'page' => 'news'
@@ -64,12 +65,13 @@ class NewsController extends Controller
         }
 
         $repo = $this->getDoctrine()->getRepository(News::class);
-        $news = $repo->findBy([], ['date' => 'ASC']);
+        $news = $repo->findBy([], ['date' => 'DESC']);
         
         return $this->render('admin/news/index.html.twig', [
             'controller_name' => 'AdminController',
             'items' => $news,
             'form' => $form->createView(),
+            'page' => 'news'
         ]);
     }
 

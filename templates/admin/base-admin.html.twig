@@ -10,13 +10,13 @@
                 <nav>
                     <ul>
                         <li>
-                            <a href="/admin" class="active">ARTWORK</a>
+                            <a href="/admin" class="{% if page == 'artwork' %}active{% endif %}">ARTWORK</a>
                         </li>
                         <li>
-                            <a href="/admin/about">ABOUT</a>
+                            <a href="/admin/about"  class="{% if page == 'about' %}active{% endif %}"></a>
                         </li>
                         <li>
-                            <a href="/admin/news">NEWS</a>
+                            <a href="/admin/news"  class="{% if page == 'news' %}active{% endif %}">NEWS</a>
                         </li>
                     </ul>
                 </nav>

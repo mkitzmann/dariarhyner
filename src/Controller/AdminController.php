@@ -51,6 +51,7 @@ class AdminController extends Controller
             'controller_name' => 'AdminController',
             'items' => $artworks,
             'form' => $form->createView(),
+            'page' => 'artwork',
         ]);
     }
 
@@ -128,6 +129,7 @@ class AdminController extends Controller
             'artwork' => $artwork,
             'form' => $form->createView(),
             'artworkimage' => $artworkImage,
+            'page' => 'artwork',
         ]);
     }
 }
