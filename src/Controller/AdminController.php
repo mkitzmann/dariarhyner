@@ -96,8 +96,6 @@ class AdminController extends Controller
 
         $entityManager->flush();
 
-        //$dump = var_dump($artworks);
-        //return new response($dump);
         return $this->redirectToRoute('AdminRoute');
     }
 

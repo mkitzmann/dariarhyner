@@ -47,7 +47,6 @@ class NewsController extends Controller
 
             /** @var Symfony\Component\HttpFoundation\File\UploadedFile $file */
             $file = $news->getImage();
-            dump($file);
             $directory = $this->getParameter('artwork_directory');
             $fileName = $fileUploader->upload($file, $directory);
             $news->setImage($fileName);
