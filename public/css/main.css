@@ -130,6 +130,12 @@ a.active {
     padding: 0 0 3rem 0;
     text-align: left;
 }
+
+.news-wrapper:last-child {
+    margin-bottom: 5rem;
+}
+
+
 .news-image {
     flex: 0 0 35%;
     min-width: 0;
@@ -208,11 +214,11 @@ img {
 
 @media screen and (orientation: portrait) {
     .sidebar {
-         height: 10vh;
+         height: 8rem;
          width: 100%;
     }
     .content {
-        margin: 10vh 4vw 16vh 4vw;
+        margin: 8rem 4vw 16vh 4vw;
     }
     .logo {
         width: 3rem;
@@ -454,7 +460,7 @@ label {
 }
 
 table {
-    align-self: center;
+    align-self: flex-start;
     font-size: 0.9rem;
 }
 td {
