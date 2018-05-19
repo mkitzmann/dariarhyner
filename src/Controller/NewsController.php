@@ -20,7 +20,7 @@ use Cocur\Slugify\Slugify;
 class NewsController extends Controller
 {
     /**
-     * @Route("/news", name="news_index", methods="GET")
+     * @Route("news", name="news_index", methods="GET")
      */
     public function index(NewsRepository $newsRepository): Response
     {
