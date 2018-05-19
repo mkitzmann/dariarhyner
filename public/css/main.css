@@ -62,7 +62,7 @@ a.active {
     display: flex;
     flex-flow: row wrap;
     padding-bottom: 10rem;
-    max-width: 1000px;
+    max-width: 900px;
 }
 
 .image-wrapper {
