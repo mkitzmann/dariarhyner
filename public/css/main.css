@@ -126,6 +126,7 @@ a.active {
     flex-flow: row nowrap;
     justify-content: center;
     max-width: 1200px;
+    width: 100%;
     padding: 0 0 3rem 0;
     text-align: left;
 }
@@ -144,7 +145,16 @@ h1,h2 {
     font-weight: 400;
     font-size:1.0rem;
     margin-top: 0;
-    margin-bottom: 2rem;
+    margin-bottom: 0;
+}
+
+h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 200;
+    font-size:0.8rem;
+    margin-top: 0;
+    margin: 0.5rem 0 2rem 0;
+    color: #ccc;
 }
 
 p, ul{
@@ -152,7 +162,7 @@ p, ul{
     font-weight: 300;
     font-size:0.9rem;
     line-height: 1.7;
-    margin-bottom: 2rem;
+    margin: 2rem 0;
 }
 
 li {
@@ -161,7 +171,7 @@ li {
 }
 
 .about p, ul {
-padding-left: 2rem;
+padding-left: 0;
 }
 .bottom-spacer {
     margin-bottom: 4rem;

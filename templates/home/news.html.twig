@@ -11,10 +11,11 @@
                 <div class="news-wrapper">
 
                     <div class="news-image">
-                        <img src="/art/{{ newsItem.image }}">
+                        <img src="{{ asset('/art/' ~ newsItem.image ) | imagine_filter('medium') }}" srcset="{{ asset('/art/' ~ newsItem.image ) | imagine_filter('small') }} 800w,{{ asset('/art/' ~ newsItem.image ) | imagine_filter('medium') }} 1400w"/>
                     </div>
                     <div class="news-body">
                         <h2>{{ newsItem.title }}</h2>
+                        <h3>{{ newsItem.date|date("d.m.Y")}}</h3>
                         <p>{{ newsItem.content|nl2br}}</p>
                     </div>
                 </div>

@@ -5,7 +5,8 @@ namespace App\Entity;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * @ORM\Entity(repositoryClass="App\Repository\NewsRepository")
+ * @ORM\Entity
+ * @ORM\Table(name="news")
  */
 class News
 {
@@ -69,17 +70,21 @@ class News
 
         return $this;
     }
-
-    public function getImage(): ?string
+    
+    /**
+     * @return string
+     */
+    public function getImage()
     {
         return $this->image;
     }
 
-    public function setImage(string $image): self
+    /**
+     * @param string $image
+     */
+    public function setImage($image)
     {
         $this->image = $image;
-
-        return $this;
     }
 
     public function getContent(): ?string
