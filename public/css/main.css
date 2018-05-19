@@ -261,7 +261,7 @@ img {
     .social-buttons a {
         display: inline;
         margin: 0 10px;
-        font-size: 0.6em;
+        font-size: 1.1vw;
     }
     
 }
@@ -343,6 +343,7 @@ img {
 .social-buttons a {
     display: inline;
     margin: 0 10px 0 0;
+    font-size: 0.8em;
 }
 .image-single-caption {
     margin-left: 4vw;
