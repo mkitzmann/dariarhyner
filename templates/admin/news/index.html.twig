@@ -1,0 +1,79 @@
+{% extends 'admin/base-admin.html.twig' %}
+
+{% block title %} | Admin | News{% endblock %}
+
+{% block body %}
+<div class="social-buttons admin-add-button">
+            <a href="#add">
+    <svg width="16" height="16" viewBox="0 0 512 512" enable-background="new 0 0 512 512"><g class="nc-icon-wrapper" fill="#111111"><path d="M448 224H288V64h-64v160H64v64h160v160h64V288h160z"></path></g></svg>
+    ADD NEWS
+        </a>
+     </div>            
+    </div>
+<div class="content">
+    <table>
+    {% for item in items %}
+    <tr>
+
+          <td>
+          <div class="admin-thumb-image-wrapper">
+          <img src="{{ asset('/art/' ~ item.image) | imagine_filter('thumbnail') }}"  />
+          </div>
+    </td>
+    <td>
+    </td>
+    <td>
+    </td>
+              <td>{{item.date|date("d.m.Y")}}
+    </td>
+    <td style="max-width: 20rem;">{{item.title}}
+        </td>
+
+
+<td>
+    <a href="{{ path('news_edit', {'id': item.id}) }}">
+    <svg xmlns="http://www.w3.org/2000/svg" x="0" y="0" width="16" height="16" viewBox="0 0 512 512"><g class="nc-icon-wrapper" fill="#111111"><path d="M162.997 439.574l-90.569-90.572L322.783 98.656l90.569 90.572z"></path><path d="M471.723 88.393l-48.115-48.114c-11.723-11.724-31.558-10.896-44.304 1.85l-45.202 45.203 90.569 90.568 45.202-45.202c12.743-12.746 13.572-32.582 1.85-44.305z"></path><path d="M64.021 363.252L32 480l116.737-32.021z"></path></g></svg>
+    </a>
+
+    </td>
+    <td>
+    <a href="#delete-{{item.id}}">
+    <svg width="16" height="16" viewBox="0 0 512 512"><g class="nc-icon-wrapper" fill="#111111"><path d="M128 405.429C128 428.846 147.198 448 170.667 448h170.667C364.802 448 384 428.846 384 405.429V160H128v245.429zM416 96h-80l-26.785-32H202.786L176 96H96v32h320V96z"></path></g></svg>
+        </a>
+                <div id="delete-{{item.id}}" class="overlay">
+            <a class="close-overlay" href="#"></a>
+            <div class="popup">
+
+                <a class="close" href="#">&times;</a>
+                <div class="popup-content">
+                Do you really want to delete "{{item.title}}"?<p>
+<form method="post" action="{{ path('news_delete', {'id': item.id}) }}">
+    <input type="hidden" name="_method" value="DELETE">
+    <input type="hidden" name="_token" value="{{ csrf_token('delete' ~ item.id) }}">
+    <button class="btn">Delete</button>
+</form>
+                    <form action="/admin">
+                            <button class="btn-cancel">{{ cancel_label|default('Cancel') }}</button>
+                    </form>
+                </div>
+            </div>
+            </div>
+    </td>
+    </tr>
+    {% endfor %}
+    
+    </table>  
+
+
+<div id="add" class="overlay">
+            <a class="close-overlay" href="#"></a>
+            <div class="popup">
+
+                <a class="close" href="#">&times;</a>
+                <div class="popup-content">
+
+            {{ include('admin/artwork/_form.html.twig', {'button_label': 'Save'}) }}
+
+    </div>
+        </div>
+{% endblock %}
