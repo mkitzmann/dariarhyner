@@ -29,3 +29,9 @@ ArtworkDeleteRoute:
 ArtworkEditRoute:
     path: /admin/artwork/{artwork_slug}/edit
     controller: App\Controller\AdminController::EditArtwork
+
+remove_trailing_slash:
+    path: /{url}
+    controller: App\Controller\RedirectingController::removeTrailingSlash
+    requirements:
+        url: .*/$
