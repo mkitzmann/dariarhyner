@@ -17,4 +17,24 @@ class ImpressumController extends Controller
                 'page' => 'impressum'
         ]);
     }
+        /**
+     * @Route("/privacy/en", name="privacy_en")
+     */
+    public function ViewPrivacyEN()
+    {
+        return $this->render('home/privacy.en.html.twig', [
+            'controller_name' => 'ImpressumController',
+                'page' => 'impressum'
+        ]);
+    }
+            /**
+     * @Route("/privacy/de", name="privacy_de")
+     */
+    public function ViewPrivacyDE()
+    {
+        return $this->render('home/privacy.de.html.twig', [
+            'controller_name' => 'ImpressumController',
+                'page' => 'impressum'
+        ]);
+    }
 }

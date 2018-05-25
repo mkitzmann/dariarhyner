@@ -10,10 +10,6 @@ AboutRoute:
     path: /about
     controller: App\Controller\HomeController::ViewAbout
 
-ImpressumRoute:
-    path: /Impressum
-    controller: App\Controller\ImpressumController::ViewImpressum
-
 AdminRoute:
     path: /admin
     controller: App\Controller\AdminController::AdminIndex

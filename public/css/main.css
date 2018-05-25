@@ -54,7 +54,7 @@ a {
 }
 
 a:hover {
-    font-weight: 500;
+    text-shadow: 0 0 0 #000;
 }
 a.active {
     font-weight: 500;
